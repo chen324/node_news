@@ -1,4 +1,4 @@
-// 新闻界面的控制器
+ // 新闻界面的控制器
 const newsModel = require("../../service/news/index");
 
 module.exports = {
@@ -9,7 +9,7 @@ module.exports = {
     let newsData = await newsModel.getData();
     let totalPage = Math.ceil(newsData.length / perPage);
     newsData = await newsModel.getNewData(perPage,p);
-    // console.log(newsData);
+    console.log(newsData);
     await ctx.render("news/index", {
       newsData,
       totalPage,
