@@ -15,6 +15,5 @@ app.use(koaBody({
 }))
 
 router(app);
-console.log(123);
 
 app.listen(8889);
